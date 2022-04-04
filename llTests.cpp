@@ -17,8 +17,8 @@ int main(int argc, char* argv[]) {
       int threeNums[3]={42,57,61};
       LinkedList *list = arrayToLinkedList(threeNums,3);
       LinkedList *empty = new LinkedList();
-      empty->head = NULL;
-      empty->tail = NULL;
+      empty->head = nullptr;
+      empty->tail = nullptr;
 
       ASSERT_EQUALS( "[42]->[57]->[61]->null", linkedListToString(list));
       addIntToEndOfList(list, 12);
@@ -41,8 +41,8 @@ int main(int argc, char* argv[]) {
       int threeNums[3]={42,57,61};
       LinkedList *list = arrayToLinkedList(threeNums,3);
       LinkedList *empty = new LinkedList();
-      empty->head = NULL;
-      empty->tail = NULL;
+      empty->head = nullptr;
+      empty->tail = nullptr;
 
       ASSERT_EQUALS( "[42]->[57]->[61]->null", linkedListToString(list));
       addIntToStartOfList(list, 12);

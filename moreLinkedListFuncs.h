@@ -44,8 +44,8 @@ int smallestValue(LinkedList *list);
 
 // list: ptr to a linked list of Node (each with int data, and Node * next)
 // Return the sum of all values in the list.
-// You may assume that list is not NULL
-// However, the list may be empty (i.e. list->head may be NULL)
+// You may assume that list is not nullptr
+// However, the list may be empty (i.e. list->head may be nullptr)
 //  in which case your code should return 0.
 
 int sum(LinkedList * list);

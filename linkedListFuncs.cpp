@@ -10,21 +10,21 @@ LinkedList * arrayToLinkedList(int *a, int size) {
   
   LinkedList * list = new LinkedList;
 
-  list->head=NULL; 
-  list->tail=NULL;
+  list->head=nullptr; 
+  list->tail=nullptr;
 
   for (int i=0; i<size; i++) {
     // add array[i] to the list
 
-    if ( list->head==NULL) {
+    if ( list->head==nullptr) {
       list->head = new Node;
       list->head->data = a[i]; // (*head).data = a[i];
-      list->head->next = NULL;
+      list->head->next = nullptr;
       list->tail = list->head;
     } else {
       list->tail->next = new Node;
       list->tail = list->tail->next;
-      list->tail->next = NULL;
+      list->tail->next = nullptr;
       list->tail->data = a[i];
     }
   }
@@ -68,7 +68,7 @@ void freeLinkedList(LinkedList * list) {
 
   Node *next;
 
-  for (Node *p=list->head; p!=NULL; p=next) {
+  for (Node *p=list->head; p!=nullptr; p=next) {
     next = p->next;
     delete p;
   }
@@ -79,7 +79,7 @@ void freeLinkedList(LinkedList * list) {
 std::string linkedListToString(LinkedList *list) {
 
   std::string result="";
-  for (const Node *  p=list->head; p!=NULL; p=p->next) {
+  for (const Node *  p=list->head; p!=nullptr; p=p->next) {
     result += "[" + intToString(p->data) + "]->";
   }
   result += "null";
